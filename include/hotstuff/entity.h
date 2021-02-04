@@ -206,6 +206,7 @@ class Block {
         DataStream s;
         s << "<block "
           << "id="  << get_hex10(hash) << " "
+          << "txs="  << std::to_string(cmds.size()) << " "
           << "height=" << std::to_string(height) << " "
           << "parent=" << get_hex10(parent_hashes[0]) << " "
           << "qc_ref=" << (qc_ref ? get_hex10(qc_ref->get_hash()) : "null") << ">";

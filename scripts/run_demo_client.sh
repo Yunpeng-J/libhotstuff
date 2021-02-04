@@ -5,4 +5,21 @@
 # commands should still get through (be replicated) once the new leader becomes
 # stable.
 
-./examples/hotstuff-client --idx 0 --iter -1 --max-async 4
+./examples/hotstuff-client --idx 1 --iter -1 --max-async 200 > log_1 2>&1 &
+./examples/hotstuff-client --idx 2 --iter -1 --max-async 200 > log_2 2>&1 &
+./examples/hotstuff-client --idx 3 --iter -1 --max-async 200 > log_3 2>&1 &
+./examples/hotstuff-client --idx 0 --iter -1 --max-async 200 > log_4 2>&1 &
+./examples/hotstuff-client --idx 1 --iter -1 --max-async 200 > log_5 2>&1 &
+./examples/hotstuff-client --idx 2 --iter -1 --max-async 200 > log_6 2>&1 &
+./examples/hotstuff-client --idx 3 --iter -1 --max-async 200 > log_7 2>&1 &
+./examples/hotstuff-client --idx 0 --iter -1 --max-async 200 > log_8 2>&1 &
+
+./examples/hotstuff-client --idx 1 --iter -1 --max-async 200 > log_51 2>&1 &
+./examples/hotstuff-client --idx 2 --iter -1 --max-async 200 > log_62 2>&1 &
+./examples/hotstuff-client --idx 3 --iter -1 --max-async 200 > log_73 2>&1 &
+./examples/hotstuff-client --idx 0 --iter -1 --max-async 200 > log_84 2>&1 &
+
+./examples/hotstuff-client --idx 1 --iter -1 --max-async 200 > log_11 2>&1 &
+./examples/hotstuff-client --idx 2 --iter -1 --max-async 200 > log_21 2>&1 &
+./examples/hotstuff-client --idx 3 --iter -1 --max-async 200 > log_31 2>&1 &
+./examples/hotstuff-client --idx 0 --iter -1 --max-async 200 > log_41 2>&1 &
